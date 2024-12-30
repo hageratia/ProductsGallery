@@ -44,13 +44,11 @@ export default function ProductDetails({ params }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-6 rounded-lg shadow-lg w-full max-w-5xl">
-        {/* صورة المنتج */}
         <img
           src={product.image}
           alt={product.title}
           className="w-full h-60 object-contain"
         />
-        {/* تفاصيل المنتج */}
         <div className="productDet flex flex-col justify-center">
           <h1 className="text-lg font-bold mt-2">
             {product.title.split(" ").slice(0, 3).join(" ")}
@@ -64,8 +62,6 @@ export default function ProductDetails({ params }) {
           </p>
         </div>
       </div>
-
-      {/* زر العودة */}
       <Link href={`/products`}>
         <div className="border rounded-lg p-3 mt-6 shadow-lg text-center bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300 w-52">
           <h2 className="text-lg font-bold">Go to Products</h2>
